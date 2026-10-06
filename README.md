@@ -40,4 +40,7 @@ Service discovery can be done using a Zookeeper. Use minimal configuration so I 
 5. If user B is online message is forwarded to chat server 2 where user B is connected
 6. If user b is offline a push notification is sent from PN servers
 7. chat server 2 forwards the message to user B. There is a persistent websocket connection between user B and chat server 2.
+For group chat for each member maintain a message sync queue similar to an inbox for a recipient.
+On the recipient side each recipient has a message sync queue which contains messages from different senders.
+Use heartbeat mechanism for online presence indicator.
  
